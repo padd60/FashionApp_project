@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/* reset code */
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* header 영역 */
+header {
+  position: relative;
+  height: 140px;
+}
+header h1 {
+  text-align: center;
+  padding: 30px 0;
+}
+.ham1 {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+}
+.ham2 {
+  display: none;
+}
+.hamBtn {
+  border: none;
+  background-color: #fff;
+}
+.hamBtn span {
+  width: 18px;
+  height: 3px;
+  background-color: #000;
+  margin: 2px 0;
+  display: block;
+}
+.iconBox {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  margin: 5px auto;
+}
+.topSubmenu {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.topSubmenu li {
+  float: left;
+  margin: 0 5px;
+}
+.topSubmenu li a {
+  font-size: 15px;
+}
+.topMainmenu {
+  float: left;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  height: 40px;
+}
+.topMainmenu > ul {
+  width: 580px;
+  height: 40px;
+  margin: 0 auto;
+}
+.topMainmenu li {
+  float: left;
+  margin: 0 10px;
+  line-height: 43px;
+}
+.topMainmenu li a {
+  color: #fff;
+}
+.search {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+.search span {
+  color: #fff;
+}
+/* content 영역 */
+#content {
+  height: 1000px;
+}
+.sliderBox {
+  height: 500px;
+  background-color: #ccc;
+}
+.sliderBox .imgBox {
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+/* footer 영역 */
