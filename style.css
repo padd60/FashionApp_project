@@ -81,13 +81,13 @@ header h1 {
   height: 40px;
 }
 .topMainmenu > ul {
-  width: 580px;
+  width: 720px;
   height: 40px;
   margin: 0 auto;
 }
 .topMainmenu li {
   float: left;
-  margin: 0 10px;
+  margin: 0 21px;
   line-height: 43px;
 }
 .topMainmenu li a {
@@ -95,26 +95,108 @@ header h1 {
 }
 .search {
   position: absolute;
-  right: 5px;
-  top: 10px;
+  right: 20px;
+  top: 9px;
+}
+.search input:focus {
+  outline: none;
 }
 .search span {
   color: #fff;
+  margin: 0 20px;
+  font-size: 18px;
 }
-/* content 영역 */
-#content {
-  height: 1000px;
-}
+
+/* slider 영역 */
 .sliderBox {
-  height: 500px;
   background-color: #ccc;
+  margin-bottom: 50px;
 }
-.sliderBox .imgBox {
-  width: 600px;
+.slider {
+  width: 800px;
   height: 500px;
   margin: 0 auto;
   border: 1px solid #333;
   box-sizing: border-box;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+.sliderBox .imgBox {
+  width: 2400px;
+}
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.caption > p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+}
+.imgBox li {
+  float: left;
+  width: 800px;
+}
+.imgBox li img {
+  width: 100%;
+}
+
+/* content 영역 */
+.topLine {
+  position: relative;
+}
+.topLine > h2 {
+  text-align: center;
+  padding: 40px 0;
+}
+.more {
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  font-weight: bold;
+}
+.brandBox {
+  padding-bottom: 50px;
+}
+.brandBox ul {
+  padding: 10px 0;
+}
+.brandBox ul li {
+  float: left;
+  width: 24%;
+  height: 250px;
+  margin: 0 6px;
+}
+.brandBox .box {
+  height: 230px;
+  background-color: dimgrey;
+}
+.brandBox ul li p {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
+}
+.magazineBox ul {
+  padding: 10px 0;
+}
+.magazineBox ul li {
+  float: left;
+  width: 45%;
+  height: 360px;
+  margin: 0 34px;
+}
+.box2 {
+  height: 320px;
+  background-color: dimgrey;
+}
+.magazineBox ul li p {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
 }
 
 /* footer 영역 */
