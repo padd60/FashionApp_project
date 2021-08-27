@@ -1,6 +1,10 @@
 @charset "utf-8";
 
 /* reset code */
+* {
+  margin: 0;
+  padding: 0;
+}
 h1,
 h2,
 p,
@@ -26,10 +30,16 @@ button {
   clear: both;
 }
 
+/* warp */
+#wrap {
+  width: 1280px;
+  margin: 0 auto;
+}
+
 /* header 영역 */
 header {
   position: relative;
-  height: 140px;
+  height: 100px;
 }
 header h1 {
   text-align: center;
@@ -54,40 +64,47 @@ header h1 {
   margin: 2px 0;
   display: block;
 }
-.iconBox {
-  width: 35px;
-  height: 35px;
-  border: 1px solid #333;
-  border-radius: 50%;
-  margin: 5px auto;
-}
 .topSubmenu {
+  width: 15%;
   position: absolute;
   top: 20px;
   right: 10px;
 }
 .topSubmenu li {
   float: left;
-  margin: 0 5px;
+  width: 31%;
+  margin: 0 1%;
+  text-align: center;
 }
 .topSubmenu li a {
   font-size: 15px;
 }
-.topMainmenu {
-  float: left;
+.iconBox {
+  width: 60%;
+  height: 35px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin: 15% auto;
+}
+.inner {
   width: 100%;
   background-color: #000;
+}
+.topMainmenu {
+  width: 1280px;
+  margin: 0 auto;
   position: relative;
   height: 40px;
 }
 .topMainmenu > ul {
-  width: 720px;
+  width: 57%;
   height: 40px;
   margin: 0 auto;
 }
 .topMainmenu li {
   float: left;
-  margin: 0 21px;
+  margin: 0 3%;
   line-height: 43px;
 }
 .topMainmenu li a {
@@ -97,23 +114,24 @@ header h1 {
   position: absolute;
   right: 20px;
   top: 9px;
+  width: 15%;
 }
 .search input:focus {
   outline: none;
 }
 .search span {
   color: #fff;
-  margin: 0 20px;
+  margin: 0 5%;
   font-size: 18px;
 }
 
 /* slider 영역 */
 .sliderBox {
   background-color: #ccc;
-  margin-bottom: 50px;
+  margin-bottom: 10%;
 }
 .slider {
-  width: 800px;
+  width: 67%;
   height: 500px;
   margin: 0 auto;
   border: 1px solid #333;
@@ -123,7 +141,14 @@ header h1 {
   overflow: hidden;
 }
 .sliderBox .imgBox {
-  width: 2400px;
+  width: 300%;
+}
+.imgBox li {
+  float: left;
+  width: 33.3333%;
+}
+.imgBox li img {
+  height: 100%;
 }
 .caption {
   position: absolute;
@@ -135,14 +160,7 @@ header h1 {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  padding: 10px;
-}
-.imgBox li {
-  float: left;
-  width: 800px;
-}
-.imgBox li img {
-  width: 100%;
+  padding: 5% 0;
 }
 
 /* content 영역 */
@@ -151,7 +169,7 @@ header h1 {
 }
 .topLine > h2 {
   text-align: center;
-  padding: 40px 0;
+  padding: 5% 0;
 }
 .more {
   position: absolute;
@@ -160,16 +178,16 @@ header h1 {
   font-weight: bold;
 }
 .brandBox {
-  padding-bottom: 50px;
+  margin-bottom: 10%;
 }
 .brandBox ul {
-  padding: 10px 0;
+  padding: 2% 0;
 }
 .brandBox ul li {
   float: left;
-  width: 24%;
+  width: 23%;
   height: 250px;
-  margin: 0 6px;
+  margin: 0 1%;
 }
 .brandBox .box {
   height: 230px;
@@ -178,16 +196,16 @@ header h1 {
 .brandBox ul li p {
   text-align: center;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 5% 0;
 }
 .magazineBox ul {
-  padding: 10px 0;
+  padding: 2% 0;
 }
 .magazineBox ul li {
   float: left;
-  width: 45%;
+  width: 44%;
   height: 360px;
-  margin: 0 34px;
+  margin: 0 3%;
 }
 .box2 {
   height: 320px;
@@ -196,7 +214,15 @@ header h1 {
 .magazineBox ul li p {
   text-align: center;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 3% 0;
 }
 
 /* footer 영역 */
+footer {
+  height: 70px;
+}
+footer p {
+  text-align: center;
+  line-height: 70px;
+  color: #fff;
+}
