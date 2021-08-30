@@ -39,7 +39,6 @@ button {
 /* header 영역 */
 header {
   position: relative;
-  height: 100px;
 }
 header h1 {
   text-align: center;
@@ -64,20 +63,39 @@ header h1 {
   margin: 2px 0;
   display: block;
 }
+.close {
+  color: #fff;
+  display: none;
+  font-size: 12px;
+  border: 1px solid #fff;
+  padding: 5px;
+}
+.close:hover {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+}
 .topSubmenu {
   width: 15%;
   position: absolute;
   top: 20px;
   right: 10px;
 }
+.topSubmenu ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
 .topSubmenu li {
-  float: left;
   width: 31%;
-  margin: 0 1%;
   text-align: center;
 }
 .topSubmenu li a {
   font-size: 15px;
+}
+.line {
+  display: none;
 }
 .iconBox {
   width: 60%;
@@ -96,13 +114,15 @@ header h1 {
   height: 40px;
 }
 .topMainmenu > ul {
+  display: flex;
   width: 57%;
   height: 40px;
   margin: 0 auto;
 }
 .topMainmenu li {
-  float: left;
-  margin: 0 3%;
+  justify-content: space-between;
+  flex: 1 1 0;
+  text-align: center;
   line-height: 43px;
 }
 .topMainmenu li a {
@@ -125,31 +145,42 @@ header h1 {
 
 /* slider 영역 */
 .sliderBox {
-  background-color: #ccc;
   margin-bottom: 10%;
+  border-bottom: 2px solid #000;
+  box-sizing: border-box;
 }
 .slider {
-  width: 67%;
-  height: 400px;
+  width: 100%;
+  height: 500px;
   margin: 0 auto;
-  border: 1px solid #333;
   box-sizing: border-box;
   position: relative;
-  background-color: #fff;
   overflow: hidden;
 }
 .sliderBox .imgBox {
   width: 300%;
   position: absolute;
-  top: -10%;
+  top: 0;
   left: 0;
+  display: flex;
+  flex-flow: row wrap;
 }
 .imgBox li {
-  float: left;
   width: 33.3333%;
 }
-.imgBox li img {
+.imgBox li a {
+  display: block;
   width: 100%;
+  height: 500px;
+}
+.img1 {
+  background: url(images/slide1.jpeg) no-repeat center / cover;
+}
+.img2 {
+  background: url(images/slide2.jpeg) no-repeat center / cover;
+}
+.img3 {
+  background: url(images/slide3.jpeg) no-repeat center / cover;
 }
 .caption {
   position: absolute;
@@ -166,12 +197,20 @@ header h1 {
 }
 
 /* content 영역 */
+#content h2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background-color: #000;
+}
 .topLine {
   position: relative;
 }
 .topLine > h2 {
   text-align: center;
-  padding: 5% 0;
+  padding: 5% 0 4% 0px;
 }
 .more {
   position: absolute;
@@ -184,34 +223,64 @@ header h1 {
 }
 .brandBox ul {
   padding: 2% 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 .brandBox ul li {
-  float: left;
   width: 23%;
   height: 250px;
-  margin: 0 1%;
 }
 .brandBox .box {
   height: 230px;
   background-color: dimgrey;
 }
+.box a {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+.brandBox > ul > li:nth-child(1) > div {
+  background: url(images/brand_img1.jpeg) no-repeat top/cover;
+}
+.brandBox > ul > li:nth-child(2) > div {
+  background: url(images/brand_img2.jpeg) no-repeat top/cover;
+}
+.brandBox > ul > li:nth-child(3) > div {
+  background: url(images/brand_img3.jpeg) no-repeat top/cover;
+}
+.brandBox > ul > li:nth-child(4) > div {
+  background: url(images/brand_img4.jpeg) no-repeat top/cover;
+}
 .brandBox ul li p {
   text-align: center;
   font-weight: bold;
   padding: 5% 0;
+  box-sizing: border-box;
 }
 .magazineBox ul {
   padding: 2% 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 .magazineBox ul li {
-  float: left;
   width: 44%;
   height: 360px;
-  margin: 0 3%;
+}
+.magazineBox > ul > li:nth-child(1) > div {
+  background: url(images/magazine_img1.jpeg) no-repeat center/cover;
+}
+.magazineBox > ul > li:nth-child(2) > div {
+  background: url(images/magazine_img2.jpeg) no-repeat center/cover;
 }
 .box2 {
   height: 320px;
-  background-color: dimgrey;
+}
+.box2 a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .magazineBox ul li p {
   text-align: center;
@@ -229,7 +298,7 @@ footer p {
   color: #fff;
 }
 
-@media screen and (min-width: 540px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #wrap {
     width: 100%;
   }
@@ -237,7 +306,6 @@ footer p {
     display: block;
   }
   header {
-    height: 160px;
     background-color: #000;
   }
   header h1 {
@@ -252,20 +320,27 @@ footer p {
   .topSubmenu {
     position: unset;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    overflow: hidden;
+  }
+  .line {
+    display: block;
   }
   .topSubmenu > ul {
-    width: 306px;
-    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 57%;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     height: 30px;
     box-sizing: border-box;
   }
   .topSubmenu li {
-    float: left;
-    width: 100px;
+    width: 30%;
     line-height: 30px;
-    margin: 0 0;
     text-align: center;
     box-sizing: border-box;
     color: #fff;
@@ -280,22 +355,35 @@ footer p {
   .iconBox {
     display: none;
   }
+  .close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
   .topMainmenu {
     height: auto;
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
+    left: -200px;
     width: 200px;
     height: 100%;
     background-color: #000;
     z-index: 999;
+    transition: 1s;
+  }
+  .topMainmenu.on {
+    left: 0;
   }
   .topMainmenu > ul {
     height: auto;
     margin: 0 20px;
   }
+  .topMainmenu > ul {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
   .topMainmenu li {
-    float: none;
     height: 40px;
     margin: 30px 0;
   }
@@ -307,6 +395,52 @@ footer p {
   .search input {
     width: 120px;
   }
-  .search span {
+  .slider {
+    width: 100%;
+  }
+  .imgBox li img {
+    width: auto;
+    height: 100%;
+  }
+  .brandBox ul li {
+    width: 46%;
+    height: 100%;
+  }
+  .more {
+    position: unset;
+    text-align: right;
+    margin: 0 3%;
+  }
+
+  .magazineBox ul li {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #wrap {
+    /* min-width: 460px; */
+  }
+  header h1 {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .brandBox ul li {
+    float: none;
+    width: 100%;
+    height: 100%;
+  }
+  .brandBox ul li p {
+    background-color: #000;
+    color: #fff;
+  }
+  .magazineBox ul li {
+    float: none;
+    width: 100%;
+    height: 100%;
+  }
+  .magazineBox ul li p {
+    background-color: #000;
+    color: #fff;
   }
 }
