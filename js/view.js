@@ -10,9 +10,9 @@ $(function () {
     let imgWidth = $('.imgBox > li').width();
     $('.imgBox')
       .stop()
-      .animate({ left: -imgWidth }, 2000, function () {
+      .animate({ marginLeft: -imgWidth }, 2000, function () {
         $('.imgBox > li:first').insertAfter('.imgBox > li:last');
-        $('.imgBox').css('left', 0);
+        $('.imgBox').css('marginLeft', 0);
       });
   }
 });

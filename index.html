@@ -18,8 +18,7 @@
   </head>
   <body>
     <div id="wrap">
-      <header class="clear">
-        <h1>POST VALUE COMMON</h1>
+      <header>
         <div class="ham1">
           <button class="hamBtn">
             <span></span>
@@ -27,7 +26,8 @@
             <span></span>
           </button>
         </div>
-        <nav class="ham2">
+        <h1>POST VALUE COMMON</h1>
+        <!-- <nav class="ham2">
           <ul class="hamMenu">
             <li>
               <a href="#">
@@ -44,22 +44,32 @@
             <li><a href="#">MAGAZINES</a></li>
             <li><a href="#">COMMNUNITY</a></li>
           </ul>
-        </nav>
+        </nav> -->
         <nav class="topSubmenu">
           <ul>
             <li>
-              <div class="iconBox"><a href="#"></a></div>
-              <a href="#">회원가입</a>
+              <div>
+                <a class="iconBox" href="#"
+                  ><i class="fas fa-sign-in-alt"></i
+                ></a>
+                <a href="#" class="subTxt">회원가입</a>
+              </div>
             </li>
             <li class="line">|</li>
             <li>
-              <div class="iconBox"><a href="#"></a></div>
-              <a href="#">로그인</a>
+              <div>
+                <a class="iconBox" href="#"><i class="fas fa-user"></i></a>
+                <a href="#" class="subTxt">로그인</a>
+              </div>
             </li>
             <li class="line">|</li>
             <li>
-              <div class="iconBox"><a href="#"></a></div>
-              <a href="#">장바구니</a>
+              <div>
+                <a class="iconBox" href="#"
+                  ><i class="fas fa-shopping-basket"></i
+                ></a>
+                <a href="#" class="subTxt">장바구니</a>
+              </div>
             </li>
           </ul>
         </nav>
@@ -69,14 +79,82 @@
       <div id="wrap">
         <nav class="topMainmenu">
           <div class="close">닫기</div>
-          <ul>
-            <li><a href="#">BRANDS</a></li>
-            <li><a href="#">NEW ARRIVALS</a></li>
-            <li><a href="#">PRE-ORDER</a></li>
-            <li><a href="#">MEN</a></li>
-            <li><a href="#">WOMEN</a></li>
-            <li><a href="#">SALE</a></li>
-            <li><a href="#">EVENTS</a></li>
+          <ul class="mainMenu">
+            <li>
+              <a href="#">BRANDS</a>
+              <ul class="subList">
+                <li><a href="#">TOP BRANDS</a></li>
+                <li><a href="#">MEN'S BRANDS</a></li>
+                <li><a href="#">WOMEN'S BRANDS</a></li>
+                <li><a href="#">RECOMMEND COLLECTION</a></li>
+                <li><a href="#">HOT TREND</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">NEW ARRIVALS</a>
+              <ul class="subList">
+                <li><a href="#">NEW BRANDS</a></li>
+                <li><a href="#">ITEMS</a></li>
+                <li><a href="#">LOOK BOOK</a></li>
+                <li><a href="#">MAGAZINE</a></li>
+                <li><a href="#">INTERVIEW</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">PRE-ORDER</a>
+              <ul class="subList">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PRE-ITEM LIST</a></li>
+                <li><a href="#">CHECK ORDER</a></li>
+                <li><a href="#">BRAND COMMENTS</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">MEN</a>
+              <ul class="subList">
+                <li><a href="#">WEEKLY BEST</a></li>
+                <li><a href="#">TOP</a></li>
+                <li><a href="#">PANTS</a></li>
+                <li><a href="#">OUTER</a></li>
+                <li><a href="#">ACC</a></li>
+                <li><a href="#">ETC</a></li>
+                <li><a href="#">MEN'S COMMUNITY</a></li>
+                <li><a href="#">MEN'S TRENDS</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">WOMEN</a>
+              <ul class="subList">
+                <li><a href="#">WEEKLY BEST</a></li>
+                <li><a href="#">TOP</a></li>
+                <li><a href="#">PANTS</a></li>
+                <li><a href="#">OUTER</a></li>
+                <li><a href="#">ACC</a></li>
+                <li><a href="#">ETC</a></li>
+                <li><a href="#">MEN'S COMMUNITY</a></li>
+                <li><a href="#">WOMEN'S TRENDS</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">SALE</a>
+              <ul class="subList">
+                <li><a href="#">CLEARING SALE</a></li>
+                <li><a href="#">TIME SALE</a></li>
+                <li><a href="#">BRAND SALE</a></li>
+                <li><a href="#">COUPONS</a></li>
+                <li><a href="#">SHOP TOPIC</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">EVENTS</a>
+              <ul class="subList">
+                <li><a href="#">RANDOM COUPONS</a></li>
+                <li><a href="#">REVIEW EVENT</a></li>
+                <li><a href="#">GIFT</a></li>
+                <li><a href="#">SPECIAL ISSUE</a></li>
+              </ul>
+            </li>
+            <div class="bg"></div>
           </ul>
           <div class="search">
             <input type="text" placeholder="검색어를 입력하세요" />
@@ -90,13 +168,13 @@
         <div class="slider">
           <ul class="imgBox">
             <li class="img1">
-              <a href="#"></a>
+              <a href="#"><img src="images/slide1-1.jpeg" alt="1" /></a>
             </li>
             <li class="img2">
-              <a href="#"></a>
+              <a href="#"><img src="images/slide2-1.jpeg" alt="2" /></a>
             </li>
             <li class="img3">
-              <a href="#"></a>
+              <a href="#"><img src="images/slide3-1.jpeg" alt="3" /></a>
             </li>
           </ul>
           <div class="caption">
@@ -114,25 +192,25 @@
           <ul>
             <li>
               <div class="box">
-                <a href="#"></a>
+                <a href="#"><img src="images/brand_img1.jpeg" alt="0" /></a>
               </div>
               <p>5252BYOIOI</p>
             </li>
             <li>
               <div class="box">
-                <a href="#"></a>
+                <a href="#"><img src="images/brand_img2.jpeg" alt="1" /></a>
               </div>
               <p>MAISON MINED</p>
             </li>
             <li>
               <div class="box">
-                <a href="#"></a>
+                <a href="#"><img src="images/brand_img3.jpeg" alt="2" /></a>
               </div>
               <p>DUNST</p>
             </li>
             <li>
               <div class="box">
-                <a href="#"></a>
+                <a href="#"><img src="images/brand_img4.jpeg" alt="3" /></a>
               </div>
               <p>LMOOD</p>
             </li>
@@ -146,13 +224,13 @@
           <ul>
             <li>
               <div class="box2">
-                <a href="#"></a>
+                <a href="#"><img src="images/magazine_img1.jpeg" alt="0" /></a>
               </div>
               <p>너의 컬러를 보여줘!</p>
             </li>
             <li>
               <div class="box2">
-                <a href="#"></a>
+                <a href="#"><img src="images/magazine_img2.jpeg" alt="1" /></a>
               </div>
               <p>WE FLAG, WE PLAY, WE</p>
             </li>
