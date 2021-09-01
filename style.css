@@ -102,7 +102,7 @@ header h1 {
   width: 35px;
 }
 .topSubmenu li .subTxt {
-  font-size: 60%;
+  font-size: 50%;
   font-weight: bold;
   color: var(--main-color1);
 }
@@ -156,8 +156,10 @@ header h1 {
   height: 0;
   overflow: hidden;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  transition: 1s;
+  opacity: 0;
 }
 .subList > li {
   font-size: 12px;
@@ -166,6 +168,7 @@ header h1 {
 }
 .topMainmenu > ul > li.on > .subList {
   height: 250px;
+  opacity: 1;
 }
 .subList > li a {
   color: var(--main-color2);
@@ -178,6 +181,7 @@ header h1 {
   height: 0;
   background-color: #333;
   z-index: 50;
+  transition: 1s;
 }
 .bg.on {
   height: 250px;
@@ -340,7 +344,7 @@ footer p {
   color: var(--main-color2);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   #wrap {
     width: 100%;
   }
@@ -428,12 +432,31 @@ footer p {
     margin: 0 20px;
   }
   .topMainmenu > ul {
-    flex-flow: column nowrap;
-    align-items: flex-start;
+    display: block;
   }
-  .topMainmenu li {
+  .topMainmenu > li {
     height: 40px;
     margin: 30px 0;
+  }
+  .subList {
+    position: unset;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: visible;
+  }
+  .subList > li {
+    width: 170px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 33px;
+  }
+  .subList > li a {
+    width: 100%;
+    display: block;
+  }
+  .bg {
+    display: none;
   }
   .search {
     position: unset;
@@ -461,7 +484,7 @@ footer p {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
   header h1 {
     width: 60%;
     margin: 0 auto;
