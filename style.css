@@ -4,6 +4,13 @@
   --main-color2: #fff;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+  min-width: 340px;
+  font-size: 16px;
+}
+
 /* reset code */
 * {
   margin: 0;
@@ -74,7 +81,7 @@ header h1 {
 .close {
   color: var(--main-color2);
   display: none;
-  font-size: 12px;
+  font-size: 0.75em;
   border: 1px solid var(--main-color2);
   padding: 5px;
 }
@@ -121,7 +128,7 @@ header h1 {
 .iconBox i {
   text-align: center;
   line-height: 34px;
-  font-size: 22px;
+  font-size: 1.375em;
   color: var(--main-color2);
 }
 .inner {
@@ -162,7 +169,7 @@ header h1 {
   opacity: 0;
 }
 .subList > li {
-  font-size: 12px;
+  font-size: 0.75em;
   height: 30px;
   line-height: 33px;
 }
@@ -204,7 +211,7 @@ header h1 {
 .search span {
   color: var(--main-color2);
   padding-left: 5%;
-  font-size: 18px;
+  font-size: 1.125em;
 }
 
 /* slider 영역 */
@@ -226,6 +233,7 @@ header h1 {
   flex-flow: row wrap;
 }
 .imgBox img {
+  display: block;
   width: 100%;
 }
 .imgBox li {
@@ -245,7 +253,7 @@ header h1 {
 }
 .caption > p {
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: bold;
   padding: 5% 0;
 }
@@ -286,9 +294,6 @@ header h1 {
   height: 250px;
   margin-bottom: 2%;
 }
-.box {
-  background-color: var(--main-color1);
-}
 .box a {
   width: 100%;
   display: block;
@@ -296,7 +301,12 @@ header h1 {
   overflow: hidden;
 }
 .box a img {
+  display: block;
   width: 100%;
+  transition: 0.5s;
+}
+.box a:hover img {
+  transform: scale(1.1);
 }
 
 .brandBox ul li p {
@@ -316,9 +326,6 @@ header h1 {
   height: 360px;
   margin-bottom: 2%;
 }
-.box2 {
-  background-color: var(--main-color1);
-}
 .box2 a {
   display: block;
   width: 100%;
@@ -326,7 +333,12 @@ header h1 {
   overflow: hidden;
 }
 .box2 a img {
+  display: block;
   width: 100%;
+  transition: 0.5s;
+}
+.box2 a:hover img {
+  transform: scale(1.1);
 }
 .magazineBox ul li p {
   text-align: center;
@@ -337,11 +349,20 @@ header h1 {
 /* footer 영역 */
 footer {
   height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 footer p {
+  font-size: 1.125em;
   text-align: center;
-  line-height: 70px;
   color: var(--main-color2);
+}
+.contactBox {
+}
+.contactBox i {
+  color: #fff;
+  font-size: 2em;
 }
 
 @media screen and (max-width: 860px) {
@@ -401,7 +422,7 @@ footer p {
     width: 3px;
   }
   .topSubmenu li .subTxt {
-    font-size: 14px;
+    font-size: 0.875em;
     color: var(--main-color2);
   }
   .iconBox {
@@ -441,15 +462,20 @@ footer p {
   .subList {
     position: unset;
     width: 100%;
-    height: 100%;
-    display: none;
-    overflow: visible;
+    height: 0;
+    flex-flow: column nowrap;
+    overflow: hidden;
+    opacity: 1;
   }
   .subList > li {
     width: 170px;
-    font-size: 12px;
+    font-size: 0.75em;
     height: 30px;
     line-height: 33px;
+  }
+  .topMainmenu > ul > li.on > .subList {
+    height: 250px;
+    opacity: 1;
   }
   .subList > li a {
     width: 100%;
