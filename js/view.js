@@ -11,6 +11,49 @@ $(function () {
       });
   }
 
+  // 다크, 라이트 모드
+  $('.dark button').on('click', function () {
+    let check =
+      document.documentElement.style.getPropertyValue('--main-color1');
+    if (check == '#fff') {
+      document.documentElement.style.setProperty('--main-color1', '#000');
+      document.documentElement.style.setProperty('--main-color2', '#fff');
+      $('.dark button').text('Dark Mode');
+    } else {
+      document.documentElement.style.setProperty('--main-color1', '#fff');
+      document.documentElement.style.setProperty('--main-color2', '#000');
+      $('.dark button').text('Light Mode');
+    }
+  });
+
+  // 스크롤 될때
+  $(window).scroll(function () {
+    let st = $(window).scrollTop();
+    console.log(st);
+
+    if (st < 300) {
+      $('.topBtn').fadeOut(300);
+    } else {
+      $('.topBtn').fadeIn(300);
+    }
+
+    let lineTop1 = $('#content h2:first').offset().top;
+    let lineTop2 = $('#content h2:last').offset().top;
+
+    if (st > lineTop1 - 400) {
+      $('#content h2:first').addClass('on');
+    } else {
+      $('#content h2:first').removeClass('on');
+    }
+
+    if (st > lineTop2 - 400) {
+      $('#content h2:last').addClass('on');
+    } else {
+      $('#content h2:last').removeClass('on');
+    }
+  });
+
+  // resize 될때
   $(window).resize(function () {
     let width = $(window).width();
     if (width > 860) {
@@ -47,6 +90,5 @@ $(function () {
       });
     }
   });
-
   $(window).resize();
 });

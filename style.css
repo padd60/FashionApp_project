@@ -43,6 +43,13 @@ button {
 body {
   background-color: var(--main-color2);
 }
+button {
+  border: none;
+  background: none;
+}
+button:hover:focus:active {
+  outline: none;
+}
 
 /* warp */
 #wrap {
@@ -52,12 +59,16 @@ body {
 
 /* header 영역 */
 header {
+  position: relative;
   width: 100%;
+  height: 155px;
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
   justify-content: space-between;
 }
 header h1 {
+  color: var(--main-color1);
   text-align: center;
   padding: 5% 0;
 }
@@ -150,7 +161,7 @@ header h1 {
   line-height: 63px;
   position: relative;
 }
-.topMainmenu ul > li a {
+.topMainmenu ul > li > a {
   color: var(--main-color2);
 }
 
@@ -177,8 +188,8 @@ header h1 {
   height: 250px;
   opacity: 1;
 }
-.subList > li a {
-  color: var(--main-color2);
+.subList > li > a {
+  color: #fff !important;
 }
 .bg {
   position: absolute;
@@ -266,11 +277,17 @@ header h1 {
   height: 2px;
   margin-top: 10px;
   background-color: var(--main-color1);
+  transform: scaleX(0);
+  transition: 1s;
+}
+#content h2.on::after {
+  transform: scaleX(1);
 }
 .topLine {
   position: relative;
 }
 .topLine > h2 {
+  color: var(--main-color1);
   text-align: center;
   padding: 5% 0 4% 0px;
 }
@@ -292,7 +309,7 @@ header h1 {
 .brandBox ul li {
   width: 23%;
   height: 250px;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
 }
 .box a {
   width: 100%;
@@ -311,8 +328,10 @@ header h1 {
 
 .brandBox ul li p {
   text-align: center;
+  font-size: 1em;
   font-weight: bold;
   padding: 5% 0;
+  color: var(--main-color1);
   box-sizing: border-box;
 }
 .magazineBox ul {
@@ -342,6 +361,8 @@ header h1 {
 }
 .magazineBox ul li p {
   text-align: center;
+  color: var(--main-color1);
+  font-size: 1em;
   font-weight: bold;
   padding: 3% 0;
 }
@@ -350,7 +371,7 @@ header h1 {
 footer {
   height: 70px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 footer p {
@@ -358,16 +379,68 @@ footer p {
   text-align: center;
   color: var(--main-color2);
 }
+footer p:nth-child(1) {
+  width: 200px;
+}
+footer p:nth-child(2) {
+  margin: 0 10%;
+}
 .contactBox {
+  display: flex;
+  flex-flow: row wrap;
+  width: 200px;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--main-color2);
+}
+.contactBox span {
+  font-size: 1em;
+  display: block;
+  margin-right: 10px;
 }
 .contactBox i {
-  color: #fff;
   font-size: 2em;
+}
+.topBtn {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 0.8%;
+}
+.topBtn a {
+  display: block;
+  color: var(--main-color1);
+  font-size: 2.5em;
+}
+.topBtn a i {
+  border-radius: 50%;
+  background-color: var(--main-color2);
+  display: block;
+}
+
+.dark {
+  position: absolute;
+  top: 10px;
+  left: 1%;
+  text-align: center;
+  line-height: 30px;
+  width: 80px;
+  height: 30px;
+  border: 1px solid var(--main-color1);
+}
+.dark button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: var(--main-color1);
 }
 
 @media screen and (max-width: 860px) {
   #wrap {
     width: 100%;
+  }
+  header {
+    height: 100%;
   }
   .ham1 {
     display: block;
@@ -472,6 +545,7 @@ footer p {
     font-size: 0.75em;
     height: 30px;
     line-height: 33px;
+    border-bottom: 1px solid var(--main-color2);
   }
   .topMainmenu > ul > li.on > .subList {
     height: 250px;
@@ -508,9 +582,44 @@ footer p {
   .magazineBox ul li {
     height: 100%;
   }
+
+  footer {
+    height: 120px;
+    flex-flow: column nowrap;
+    order: 0;
+    justify-content: space-evenly;
+  }
+
+  footer p:nth-child(1) {
+    order: 2;
+  }
+  footer p:nth-child(2) {
+    order: 3;
+  }
+  footer .contactBox {
+    order: 1;
+  }
+
+  .dark {
+    line-height: 20px;
+    width: 60px;
+    height: 20px;
+    left: auto;
+    right: 1%;
+    border: 1px solid var(--main-color2);
+  }
+  .dark button {
+    color: var(--main-color2);
+    font-size: 0.7em;
+  }
 }
 
 @media screen and (max-width: 520px) {
+  header,
+  .sliderBox,
+  footer {
+    font-size: 14px;
+  }
   header h1 {
     width: 60%;
     margin: 0 auto;
@@ -532,5 +641,11 @@ footer p {
   .magazineBox ul li p {
     background-color: var(--main-color1);
     color: var(--main-color2);
+  }
+  .magazineBox {
+    margin-bottom: 70px;
+  }
+  .topBtn {
+    bottom: 135px;
   }
 }
