@@ -568,6 +568,9 @@ footer p:nth-child(2) {
     line-height: 33px;
     border-bottom: 1px solid var(--main-color2);
   }
+  .subList > li > a {
+    color: var(--main-color2) !important;
+  }
   .topMainmenu > ul > li.on > .subList {
     height: 250px;
     opacity: 1;
