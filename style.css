@@ -117,7 +117,10 @@ header h1 {
 }
 .topSubmenu li {
   text-align: center;
-  width: 35px;
+  width: 45px;
+}
+.topSubmenu li:hover .subTxt {
+  color: orange;
 }
 .topSubmenu li .subTxt {
   font-size: 50%;
@@ -129,6 +132,7 @@ header h1 {
 }
 .iconBox {
   display: block;
+  width: 35px;
   height: 35px;
   border: 1px solid #333;
   box-sizing: border-box;
@@ -164,7 +168,9 @@ header h1 {
 .topMainmenu ul > li > a {
   color: var(--main-color2);
 }
-
+.topMainmenu ul > li:hover > a {
+  color: orange;
+}
 .subList {
   z-index: 999;
   position: absolute;
@@ -190,6 +196,9 @@ header h1 {
 }
 .subList > li > a {
   color: #fff !important;
+}
+.subList > li:hover > a {
+  color: orange !important;
 }
 .bg {
   position: absolute;
@@ -334,6 +343,9 @@ header h1 {
   color: var(--main-color1);
   box-sizing: border-box;
 }
+.brandBox ul li:hover p {
+  color: orange;
+}
 .magazineBox ul {
   padding: 2% 0;
   display: flex;
@@ -366,6 +378,9 @@ header h1 {
   font-weight: bold;
   padding: 3% 0;
 }
+.magazineBox ul li:hover p {
+  color: orange;
+}
 
 /* footer 영역 */
 footer {
@@ -380,7 +395,7 @@ footer p {
   color: var(--main-color2);
 }
 footer p:nth-child(1) {
-  width: 200px;
+  width: 230px;
 }
 footer p:nth-child(2) {
   margin: 0 10%;
@@ -388,7 +403,7 @@ footer p:nth-child(2) {
 .contactBox {
   display: flex;
   flex-flow: row wrap;
-  width: 200px;
+  width: 230px;
   justify-content: space-around;
   align-items: center;
   color: var(--main-color2);
@@ -400,6 +415,9 @@ footer p:nth-child(2) {
 }
 .contactBox i {
   font-size: 2em;
+}
+.contactBox a:hover i {
+  color: orange;
 }
 .topBtn {
   display: none;
@@ -416,6 +434,9 @@ footer p:nth-child(2) {
   border-radius: 50%;
   background-color: var(--main-color2);
   display: block;
+}
+.topBtn a:hover i {
+  color: orange;
 }
 
 .dark {
